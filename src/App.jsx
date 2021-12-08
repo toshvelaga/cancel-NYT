@@ -4,11 +4,18 @@ import Button from './components/Button'
 import './App.css'
 
 function App() {
+  const submitHandler = () => {
+    alert('Submitted')
+  }
   return (
     <div className='App'>
       <h1>Cancel the New York Times</h1>
       <TextInput label='Phone Number' />
-      <Button title='Submit' style={{ width: '100%' }} />
+      <Button
+        onClick={submitHandler}
+        title='Submit'
+        style={{ width: '100%' }}
+      />
     </div>
   )
 }

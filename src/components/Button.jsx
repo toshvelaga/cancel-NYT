@@ -8,7 +8,7 @@ function Button(props) {
         disabled={props.disabled}
         style={props.style}
         className='button'
-        onClick={props.fx}
+        onClick={props.onClick}
       >
         {props.loading ? <div class='loader'></div> : null}
         {props.title}
