@@ -1,12 +1,6 @@
-:root {
-  --main-font: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Ubuntu, Arial, sans-serif;
-}
-
 .App {
   width: 40%;
   margin: 6rem auto;
-  font-family: var(--main-font);
 }
 
 @media only screen and (max-width: 1000px) {

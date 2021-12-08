@@ -9,7 +9,7 @@ function App() {
   }
   return (
     <div className='App'>
-      <h1>Cancel the New York Times</h1>
+      <h1 className='heading'>Cancel the New York Times</h1>
       <TextInput label='Phone Number' />
       <Button
         onClick={submitHandler}
