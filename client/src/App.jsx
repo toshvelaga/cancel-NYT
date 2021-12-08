@@ -13,8 +13,14 @@ function App() {
     }
   }
 
-  const submitHandler = () => {
-    alert('Submitted')
+  const onSubmitHandler = async () => {
+    if (!userPhoneNumber) {
+      alert('Please enter your phone number')
+    } else if (userPhoneNumber.length < 10) {
+      alert('Please enter a valid phone number')
+    } else if (userPhoneNumber.length === 10) {
+      alert('Thank you for your submission')
+    }
   }
 
   return (
@@ -30,7 +36,7 @@ function App() {
         required
       />
       <Button
-        onClick={submitHandler}
+        onClick={onSubmitHandler}
         title='Submit'
         style={{ width: '100%' }}
       />
