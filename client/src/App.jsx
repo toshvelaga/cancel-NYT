@@ -26,6 +26,11 @@ function App() {
   return (
     <div className='App'>
       <h1 className='heading'>Cancel the New York Times</h1>
+      <p>
+        Enter your phone number and you will get connected to someone who works
+        at the NYT. Avoid the long wait times and having to enter in your
+        account information.
+      </p>
       <TextInput
         onChange={onPhoneNumberChangeHandler}
         label='Phone Number'
