@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import TextInput from './components/TextInput'
 import Button from './components/Button'
+import axios from 'axios'
 import './App.css'
 
 function App() {
   const [userPhoneNumber, setuserPhoneNumber] = useState('')
+  const [loading, setloading] = useState(false)
 
   const onPhoneNumberChangeHandler = (e) => {
     const re = /^[0-9\b]+$/
@@ -14,12 +16,25 @@ function App() {
   }
 
   const onSubmitHandler = async () => {
+    const body = {
+      userPhoneNumber,
+      // the businessPhoneNumber here is for the NYT
+      businessPhoneNumber: '8662733612',
+      keywords: 'next',
+    }
     if (!userPhoneNumber) {
       alert('Please enter your phone number')
     } else if (userPhoneNumber.length < 10) {
       alert('Please enter a valid phone number')
     } else if (userPhoneNumber.length === 10) {
-      alert('Thank you for your submission')
+      try {
+        setloading(true)
+        axios.post('http://localhost:5001/api/call', body)
+      } catch (error) {
+        console.log(error)
+      } finally {
+        setloading(false)
+      }
     }
   }
 
@@ -41,6 +56,7 @@ function App() {
         required
       />
       <Button
+        loading={loading}
         onClick={onSubmitHandler}
         title='Submit'
         style={{ width: '100%' }}
