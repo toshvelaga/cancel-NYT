@@ -51,8 +51,9 @@ const wss = new WebSocket.Server({ port: WS_PORT }, () => {
 })
 
 // REPLACE THIS WITH YOUR NGROK URL
-let ngrokURL = '8125-2603-8080-9b06-8b00-4c8b-4cf4-478b-185b.ngrok.io'
-// ngrokURL = 'http://localhost:3001/'
+let ngrokURL = '208a-2603-8080-9b06-8b00-2d9a-fe88-4f33-52b1.ngrok.io'
+
+console.log(ngrokURL)
 
 // rest api that sends twilio text message ==> create a phone call to a business and streams the audio through websocket ==> after hearing the keyword in the stream, update the call to forward the call to the user
 app.post('/api/call', async (req, res) => {
