@@ -5,8 +5,6 @@ const WebSocket = require('ws')
 const EventEmitter = require('events').EventEmitter
 require('dotenv').config()
 
-const nytKeyword = 'next'
-
 //Configure Transcription Request for Google Speech to Text
 const request = {
   config: {
@@ -67,7 +65,7 @@ app.post('/api/call', async (req, res) => {
   // sends text message to your personal phone number
   await twilioClient.messages
     .create({
-      body: 'Thank you for sending this text message.',
+      body: 'Thank you for canceling the New York Times.',
       to: `+1${userPhoneNumber}`,
       from: `+1${process.env.twilioPhoneNumber}`,
     })
