@@ -1,6 +1,6 @@
 Cancel your New York Times subscription. Built using react, vitejs, node, websockets (ws), twilio, and google speech to text.
 
-Here's the corresponding [Medium article]() with a detailed explanation.
+Here's the corresponding [Medium article](https://medium.com/@toshvelaga/cancel-your-nyt-subscription-using-twilio-and-google-speech-to-text-887a27bdf465) with a detailed explanation.
 
 <span style="display:block" class="note">
   <img src="https://readmeassets.s3.us-east-2.amazonaws.com/Screen+Shot+2021-12-08+at+8.59.41+PM.png">
